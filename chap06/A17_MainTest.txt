@@ -1,0 +1,13 @@
+package java_chap06;
+
+public class A17_MainTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    main(null);
+	}
+/*
+ * main 메서드가 종료되지 않고 호출스택에 계속해서 쌓이게 되므로 결국 호출스택의 메모리 한계를 넘게 된다.
+ * StackOverflowError가 발생해서 프로그램이 비정상적으로 종료된다는데~~
+ */
+}
