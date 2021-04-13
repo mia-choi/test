@@ -1,0 +1,19 @@
+package chap07;
+
+public class A16_CastingTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Car car=new Car();
+     Car car2=null;
+     FireEngine fe=null;
+     
+     car.drive();
+     fe=(FireEngine)car; //컴파일은 괜찮지만 실행 시 에러가 발생
+      //이유: 형변환에 오류가 있기 때문이다. 조상타입의 인스턴스를 자손타입의 참조변수로 참조하는 것은 허용되지 않는다.
+      //참조변수가 가리키는 인스턴스의 타입이 무엇인지 확인하는 것이 중요하다.
+     fe.drive();
+     car2=fe;
+     car2.drive();
+	}
+}
