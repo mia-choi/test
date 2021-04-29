@@ -1,0 +1,30 @@
+package chap08;
+
+public class A05_ExceptionEx5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        System.out.println(1);
+        System.out.println(2);
+        try {
+        	System.out.println(3);
+        	System.out.println(0/0);
+        	System.out.println(4); //실행되지 않는다.
+        }catch(ArithmeticException ae) {
+        	System.out.println(5); 
+        }//try-catch의 끝
+        System.out.println(6);
+} //main메서드의 끝
+}
+
+/*
+실행 결과 
+1
+2
+3
+5
+6
+
+왜냐하면 try 블럭에서 예외가 발생했기 때문에 try 블럭을 바로 벗어나서 
+'System.out.println(4);' 는 실행되지 않는다.
+*/
