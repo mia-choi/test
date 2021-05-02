@@ -1,0 +1,17 @@
+package chap08;
+
+public class A11_ExceptionEx11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  throw new RuntimeException(); //RuntimeException을 고의로 발생시킨다.
+	}
+}
+/*
+ * Exception in thread "main" java.lang.RuntimeException
+	at chap08.A11_ExceptionEx11.main(A11_ExceptionEx11.java:7)
+ * 'RuntimeException 클래스와 그 자손에 해당하는 예외는 프로그래머에 의해 실수로 발생하는 것들이기 때문에
+ * 예외처리를 강제하지 않는 것이다. 
+ * 
+ * 컴파일은 성공적으로 되지만, 실행하면 위의 실행결과처럼 RuntimeException이 발생하여 비정상적으로 종료된다.
+ */

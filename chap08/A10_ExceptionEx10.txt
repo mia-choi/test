@@ -1,0 +1,17 @@
+package chap08;
+
+public class A10_ExceptionEx10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  throw new Exception(); //Exception을 고의로 발생시킨다.
+	}
+}
+/*Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Unhandled exception type Exception
+
+	at chap08.A10_ExceptionEx10.main(A10_ExceptionEx10.java:7)
+	
+	위와 같은 에러가 발생하며 컴파일이 완료되지 않을 것이다.
+ * 
+ */
