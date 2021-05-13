@@ -1,0 +1,17 @@
+package chap09;
+class A03_HashCodeEx1 {
+	public static void main(String [] args) {
+		String str1=new String("abc");
+		String str2 =new String("abc");
+		
+		System.out.println(str1.equals(str2));
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
+		System.out.println(System.identityHashCode(str1));
+		System.out.println(System.identityHashCode(str2));
+	}
+}
+/*
+해시함수는 찾고자 하는 값을 입력하면, 그 값이 저장된 위치를 알려주는 해시코드(hash code)를 반환한다.
+System.identityHashCode(Object x)의 호출결과는 실행 할 때마다 달라질 수 있다.
+*/

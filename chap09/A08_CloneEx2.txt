@@ -1,0 +1,24 @@
+
+package chap09;
+
+import java.util.Arrays;
+
+class A08_CloneEx2{
+	public static void main(String [] args) {
+		int[] arr= {1,2,3,4,5};
+		int [] arrClone=arr.clone();//배열 arr을 복제해서 같은 내용의 새로운 배열을 만든다.
+		arrClone[0]=6;
+		
+		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(arrClone));
+	}
+}
+/*
+출력값
+[1, 2, 3, 4, 5]
+[6, 2, 3, 4, 5]
+
+clone()을 이용해서 배열을 복사하는 예제이다. 
+일반적으로 배열을 복사할 때 같은 길이의 새로운 배열을 생성한 다음에 System.arraycopy()를 이용해서 내용을 복사.
+이처럼 clone()을 이용해서 간단하게 복사할 수 있다.
+*/
