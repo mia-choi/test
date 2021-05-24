@@ -1,0 +1,29 @@
+package chap10;
+
+import java.util.Calendar;
+
+public class A05_CalendarEx5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Calendar date=Calendar.getInstance();
+     date.set(2015, 0, 31); //2015년 1월 31일
+     System.out.println(toString(date));
+     date.roll(Calendar.MONTH, 1);
+     System.out.println(toString(date));
+	}
+	public static String toString(Calendar date) {
+		return date.get(Calendar.YEAR)+"년" +(date.get(Calendar.MONTH)+1)
+				+"월 "+date.get(Calendar.DATE)+"일";
+	}
+}
+/*
+add(int field, int amount)를 사용하면 지정한 필드의 값을 원하는 만큼 증가 또는 감소시킬 수 있기 때문에
+add메서드를 이용하면 특정 날짜 또는 시간을 기점으로 해서 일정기간 전후의 날짜와 시간을 알아낼 수 있다.
+roll(int field, int amount)도 지정한 필드의 값을 증가 또는 감소시킬 수 있는데
+add메서드와의 차이점은 다른 필드에 영향을 미치지 않는다는 것이다.
+
+실행결과 
+2015년1월 31일
+2015년2월 28일
+*/
