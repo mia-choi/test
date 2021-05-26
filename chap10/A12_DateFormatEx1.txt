@@ -1,0 +1,55 @@
+package chap10;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class A12_DateFormatEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Date today=new Date();
+    
+    SimpleDateFormat sdf1, sdf2, sdf3, sdf4;
+    SimpleDateFormat sdf5, sdf6, sdf7, sdf8, sdf9;
+    
+    sdf1=new SimpleDateFormat("yyyy-MM-dd");
+    sdf2=new SimpleDateFormat("''yy년 MMM dd일 E요일");
+    sdf3=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    sdf4=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+    
+    sdf5=new SimpleDateFormat("오늘은 올 해의 D번째 날입니다.");
+    sdf6=new SimpleDateFormat("오늘은 이 달의 d번째 날입니다.");
+    sdf7=new SimpleDateFormat("오늘은 올 해의 w번째 주입니다.");
+    sdf8=new SimpleDateFormat("오늘은 이 달의 W번째 주입니다.");
+    sdf9=new SimpleDateFormat("오늘은 이 달의 F번째 E요일입니다.");
+    
+    System.out.println(sdf1.format(today)); //format(Date d)
+    System.out.println(sdf2.format(today));
+    System.out.println(sdf3.format(today));
+    System.out.println(sdf4.format(today));
+    System.out.println();
+    System.out.println(sdf5.format(today));
+    System.out.println(sdf6.format(today));
+    System.out.println(sdf7.format(today));
+    System.out.println(sdf8.format(today));
+    System.out.println(sdf9.format(today));
+	}
+}
+/*
+ * 출력값
+ *
+2021-05-26
+'21년 5월 26일 수요일
+2021-05-26 23:23:57.667
+2021-05-26 11:23:57 오후
+
+오늘은 올 해의 146번째 날입니다.
+오늘은 이 달의 26번째 날입니다.
+오늘은 올 해의 22번째 주입니다.
+오늘은 이 달의 5번째 주입니다.
+오늘은 이 달의 4번째 수요일입니다.
+
+SimpleDateFormat을 사용하는 방법은 먼저 원하는 출력형식의 패턴을 작성하여
+SimpleDateFormat의 인스턴스를 생성한 다음, 출력하고자 하는 Date 인스턴스를 가지고
+format(Date d)를 호출하면 지정한 출력형식에 맞게 변환된 문자열을 얻게 된다.
+*/
